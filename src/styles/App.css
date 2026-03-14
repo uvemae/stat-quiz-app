@@ -18,16 +18,6 @@ body {
     padding: 2rem 3rem;
 }
 
-button {
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: var(--font-size-base);
-}
-
 button:hover {
     opacity: 0.9;
 }
@@ -45,4 +35,25 @@ button:hover {
 .results-table td,
 .results-table th {
     padding: 10px 10px;
+}
+
+.option-button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #000000;
+    padding: 12px 24px;
+    margin: 8px 0;
+    width: 40%;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.option-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
 }

@@ -31,6 +31,12 @@ const Quiz: React.FC = () => {
         }
     };
 
+    const handleRestart = () => {
+        setCurrentIndex(0);
+        setResults([]);
+        setQuizFinished(false);
+    };
+
     const score = results.filter(r => r.isCorrect).length;
 
     if (quizFinished) {
@@ -38,6 +44,9 @@ const Quiz: React.FC = () => {
             <div>
                 <ScoreMessage score={score} total={questions.length} />
                 <ResultsTable results={results} questions={questions} />
+                <button onClick={handleRestart} className="option-button">
+                    Alusta uuesti
+                </button>
             </div>
         );
     }
