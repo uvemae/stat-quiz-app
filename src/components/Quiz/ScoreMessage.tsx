@@ -12,30 +12,23 @@ const ScoreMessage: React.FC<ScoreMessageProps> = ({ score, total }) => {
     let message = '';
 
     if (percentage >= 90) {
-        grade = '5';
-        message = 'Suurepärane!';
+        message = 'Suurepärane tulemus!';
     } else if (percentage >= 80) {
-        grade = '4';
-        message = 'Väga hea!';
+        message = 'Väga hea tulemus!';
     } else if (percentage >= 70) {
-        grade = '3';
-        message = 'Hea!';
+        message = 'Hea tulemus!';
     } else if (percentage >= 60) {
-        grade = '2';
-        message = 'Rahuldav.';
+        message = 'Rahuldav tulemus.';
     } else if (percentage >= 50) {
-        grade = '1';
-        message = 'Kasin.';
+        message = 'Kasin tulemus.';
     } else {
-        grade = '0';
-        message = 'Nõrk.';
+        message = 'Nõrk tulemus. Tutvu statistikaga.';
     }
 
     return (
         <div className="score-message">
             <h2>Viktoriin lõpetatud!</h2>
             <p className="score">Tulemus: {score}/{total} ({percentage}%)</p>
-            <p className="grade">Hinne: {grade}</p>
             <p className="message">{message}</p>
         </div>
     );

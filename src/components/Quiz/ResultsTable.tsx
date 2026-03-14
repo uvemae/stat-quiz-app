@@ -24,7 +24,9 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ results, questions }) => {
                     <tr key={idx}>
                         <td>{result.question}</td>
                         <td>{q?.options[result.userAnswer]}</td>
-                        <td>{result.isCorrect ? '✓' : '✗'}</td>
+                        <td className={result.isCorrect ? 'correct' : 'incorrect'}>
+                            {result.isCorrect ? '✓' : '✗'}
+                        </td>
                     </tr>
                 );
             })}

@@ -44,9 +44,14 @@ const Quiz: React.FC = () => {
             <div>
                 <ScoreMessage score={score} total={questions.length} />
                 <ResultsTable results={results} questions={questions} />
-                <button onClick={handleRestart} className="option-button">
-                    Alusta uuesti
-                </button>
+                <div className="restart-button-container">
+                    <a onClick={handleRestart} className="option-button" style={{cursor: 'pointer'}}>
+                        Alusta uuesti
+                    </a>
+                    <a href="https://stat.ee/et" target="_blank" rel="noopener noreferrer" className="stat-button">
+                        Tutvu statistikaga
+                    </a>
+                </div>
             </div>
         );
     }
