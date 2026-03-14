@@ -41,7 +41,7 @@ const Quiz: React.FC = () => {
 
     if (quizFinished) {
         return (
-            <div>
+            <div className="results-container">
                 <ScoreMessage score={score} total={questions.length} />
                 <ResultsTable results={results} questions={questions} />
                 <div className="restart-button-container">
@@ -57,12 +57,14 @@ const Quiz: React.FC = () => {
     }
 
     return (
-        <Question
-            question={questions[currentIndex]}
-            onAnswer={handleAnswer}
-            currentQuestionNumber={currentIndex + 1}
-            totalQuestions={questions.length}
-        />
+        <div className="quiz-container">
+            <Question
+                question={questions[currentIndex]}
+                onAnswer={handleAnswer}
+                currentQuestionNumber={currentIndex + 1}
+                totalQuestions={questions.length}
+            />
+        </div>
     );
 };
 

@@ -6,7 +6,7 @@ test.describe('Quiz Application', () => {
     });
 
     test('should load quiz and show first question', async ({ page }) => {
-        await expect(page.locator('h1')).toContainText('Statistikaameti Viktoriin');
+        await expect(page.locator('h1')).toContainText('Statistikaameti viktoriin');
         await expect(page.locator('h2')).toContainText('Küsimus 1/10');
     });
 
