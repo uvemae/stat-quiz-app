@@ -5,7 +5,7 @@ import Quiz from "./components/Quiz/Quiz.tsx";
 
 function App() {
     return (
-        <div>
+        <div className="container">
             <h1>Statistikaameti Viktoriin</h1>
             <Quiz/>
         </div>

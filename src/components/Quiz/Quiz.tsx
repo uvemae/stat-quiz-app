@@ -3,6 +3,7 @@ import { questions } from '../../data/questions';
 import { QuizResult } from '../../types/quiz.types';
 import Question from './Question';
 import ScoreMessage from './ScoreMessage';
+import ResultsTable from './ResultsTable';
 
 const Quiz: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,6 +37,7 @@ const Quiz: React.FC = () => {
         return (
             <div>
                 <ScoreMessage score={score} total={questions.length} />
+                <ResultsTable results={results} questions={questions} />
             </div>
         );
     }

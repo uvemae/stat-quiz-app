@@ -15,7 +15,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: var(--spacing-lg);
+    padding: 2rem 3rem;
 }
 
 button {
@@ -30,4 +30,19 @@ button {
 
 button:hover {
     opacity: 0.9;
+}
+
+.results-table td:nth-child(2),
+.results-table td:nth-child(3) {
+    text-align: right;
+}
+
+.results-table th:nth-child(2),
+.results-table th:nth-child(3) {
+    text-align: right;
+}
+
+.results-table td,
+.results-table th {
+    padding: 10px 10px;
 }
